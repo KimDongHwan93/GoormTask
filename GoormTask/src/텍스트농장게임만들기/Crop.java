@@ -1,4 +1,4 @@
-package 농장텍스트게임만들기;
+package 텍스트농장게임만들기;
 
 public abstract class Crop {
 
@@ -11,10 +11,8 @@ public abstract class Crop {
 
 
 
-          public void giveWaterCrop (){
-          }
+    public void giveWaterCrop (){
+    }
 
 
 }
-
-
