@@ -12,6 +12,9 @@ public class Main {
 
         Crop[] crop = new Crop[5];
 
+        Merchant merchant = new Merchant(20);
+        merchant.start();
+
         int behaviorInput = 1;
         int howFarm;
         int myMoney = 0;
@@ -70,7 +73,14 @@ public class Main {
                         System.out.println("몇번 밭에 작물을 파시겠습니까?");
                         System.out.println("1. 1번밭 2. 2번밭 3. 3번밭 4. 4번밭 5. 5번밭");
                         howFarm = sc.nextInt();
-                        myMoney += crop[howFarm].price;
+
+                        if(merchant.isMerchant == true){
+                            myMoney += crop[howFarm].price*2;
+                        }
+                        else{
+                            myMoney += crop[howFarm].price;
+                        }
+
                         System.out.println("\n------------------------------------------------");
                         System.out.println(howFarm + "번 작물을 팔았습니다.");
                         System.out.println("현재 금액은 " + myMoney + "원 입니다.");
